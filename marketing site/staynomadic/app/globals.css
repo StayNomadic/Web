@@ -1,0 +1,136 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+/* Dark variant helper used by shadcn/ui */
+@custom-variant dark (&:is(.dark *));
+
+/* Tailwind v4 design tokens mapped to CSS vars */
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  /* Fonts */
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-geist-mono);
+
+  /* shadcn/ui color tokens */
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  /* Charts (optional) */
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+
+  /* Sidebar (optional) */
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  /* Radii mapped to --radius */
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+/* Brand variables */
+:root {
+  /* Rounded-2xl feel across components */
+  --radius: 1rem;
+
+  /* Light mode brand */
+  --background: #ffffff;
+  --foreground: #0b1b24;
+
+  --card: #ffffff;
+  --card-foreground: #0b1b24;
+
+  --popover: #ffffff;
+  --popover-foreground: #0b1b24;
+
+  /* Primary teal (solid). Gradient is provided via utility class below */
+  --primary: #00afa7; /* between #00C6A7 and #009F9D */
+  --primary-foreground: #ffffff;
+
+  --secondary: #f5f7f8;
+  --secondary-foreground: #0b1b24;
+
+  --muted: #eef2f3;
+  --muted-foreground: #5b6b73;
+
+  --accent: #edf7f6;
+  --accent-foreground: #0b1b24;
+
+  --destructive: #dc2626;
+  --border: #e5e7eb;
+  --input: #e5e7eb;
+  --ring: #94a3b8;
+
+  /* Optional charts */
+  --chart-1: #00afa7;
+  --chart-2: #64748b;
+  --chart-3: #0ea5e9;
+  --chart-4: #84cc16;
+  --chart-5: #f59e0b;
+
+  /* Optional sidebar */
+  --sidebar: #f8fafc;
+  --sidebar-foreground: #0b1b24;
+  --sidebar-primary: #00afa7;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #eef2f3;
+  --sidebar-accent-foreground: #0b1b24;
+  --sidebar-border: #e5e7eb;
+  --sidebar-ring: #94a3b8;
+}
+
+
+/* Base layer */
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    color-scheme: light;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Utilities */
+@layer utilities {
+  .bg-teal-gradient {
+    background-image: linear-gradient(135deg, #00c6a7 0%, #009f9d 100%);
+  }
+
+  .card-hover {
+    @apply transition-transform duration-200 ease-out hover:-translate-y-0.5 hover:shadow-lg;
+  }
+
+  .focus-ring {
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background;
+  }
+}
