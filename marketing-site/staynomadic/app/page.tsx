@@ -2,7 +2,6 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import ValueCards from "@/components/ValueCards";
 import HowItWorks from "@/components/HowItWorks";
-import CityGrid from "@/components/CityGrid";
 import Testimonials from "@/components/Testimonials";
 import CtaBand from "@/components/CtaBand";
 import Faq from "@/components/Faq";
@@ -16,7 +15,6 @@ export default function Home() {
         <Hero />
         <ValueCards />
         <HowItWorks />
-        <CityGrid />
         <Testimonials />
         <CtaBand />
         <Faq />

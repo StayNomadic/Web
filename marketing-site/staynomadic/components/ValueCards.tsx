@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Building2, Wifi, Plane, Mountain, ShieldCheck, PawPrint } from "lucide-react";
+import { Building2, Wifi, Stethoscope, Mountain, Users, PawPrint } from "lucide-react";
 import Container from "./Container";
 
 type Item = {
@@ -21,9 +21,9 @@ const items: Item[] = [
     desc: "Verified work‑ready options with proximity notes.",
   },
   {
-    icon: Plane,
-    title: "Logistics",
-    desc: "Airport transfer, SIM, gym, and local transport primers.",
+    icon: Stethoscope,
+    title: "Healthcare & wellness",
+    desc: "Find nearby doctors, dentists, gyms, and wellness centers.",
   },
   {
     icon: Mountain,
@@ -31,9 +31,9 @@ const items: Item[] = [
     desc: "Weekend escapes, classes, hikes—planned to your vibe.",
   },
   {
-    icon: ShieldCheck,
-    title: "Compliance resources",
-    desc: "Visas and insurance guidance via vetted partners.",
+    icon: Users,
+    title: "Local events",
+    desc: "Discover meetups, workshops, and social gatherings in your area.",
   },
   {
     icon: PawPrint,

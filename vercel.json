@@ -1,7 +1,7 @@
 {
-  "buildCommand": "cd 'marketing site/staynomadic' && npm run build",
-  "outputDirectory": "marketing site/staynomadic/.next",
-  "installCommand": "cd 'marketing site/staynomadic' && npm install",
+  "buildCommand": "cd marketing-site/staynomadic && npm run build",
+  "outputDirectory": "marketing-site/staynomadic/.next",
+  "installCommand": "cd marketing-site/staynomadic && npm install",
   "framework": "nextjs",
-  "rootDirectory": "marketing site/staynomadic"
+  "rootDirectory": "marketing-site/staynomadic"
 }
