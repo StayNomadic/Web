@@ -2,9 +2,9 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import ValueCards from "@/components/ValueCards";
 import HowItWorks from "@/components/HowItWorks";
-import Testimonials from "@/components/Testimonials";
+import Benefits from "@/components/Benefits";
+import Pricing from "@/components/Pricing";
 import CtaBand from "@/components/CtaBand";
-import Faq from "@/components/Faq";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -13,11 +13,11 @@ export default function Home() {
       <Navbar />
       <main id="content" className="relative">
         <Hero />
-        <ValueCards />
+        <Benefits />
         <HowItWorks />
-        <Testimonials />
+        <ValueCards />
+        <Pricing />
         <CtaBand />
-        <Faq />
       </main>
       <Footer />
     </>

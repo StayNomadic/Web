@@ -1,5 +1,4 @@
 import * as React from "react";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Building2, Wifi, Stethoscope, Mountain, Users, PawPrint } from "lucide-react";
 import Container from "./Container";
 
@@ -53,23 +52,23 @@ export default function ValueCards() {
             What we handle
           </h2>
           <p className="mt-2 text-foreground/70">
-            We handle the research, booking, and support—so you don’t juggle tabs. Real humans, clear pricing.
+            We handle the research, booking, and support—so you don&apos;t juggle tabs. Real humans, clear pricing.
           </p>
         </div>
-        <div className="grid grid-cols-1 gap-4 sm:gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {items.map((it) => (
-            <Card key={it.title} className="rounded-2xl card-hover">
-              <CardHeader className="flex flex-row items-center gap-3 pb-2">
-                <div className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-accent">
-                  <it.icon className="h-5 w-5 text-primary" aria-hidden />
+        <div className="mx-auto max-w-5xl">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {items.map((it) => (
+              <div key={it.title} className="flex gap-5 items-start p-6 rounded-2xl">
+                <div className="inline-flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-xl bg-teal-gradient shadow-lg">
+                  <it.icon className="h-7 w-7 text-white" aria-hidden strokeWidth={2} />
                 </div>
-                <CardTitle className="text-base">{it.title}</CardTitle>
-              </CardHeader>
-              <CardContent className="pt-0 text-sm text-foreground/70">
-                {it.desc}
-              </CardContent>
-            </Card>
-          ))}
+                <div className="flex-1 pt-1">
+                  <h3 className="text-xl font-bold mb-2">{it.title}</h3>
+                  <p className="text-base text-foreground/80 leading-relaxed">{it.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
         </Container>
       </section>

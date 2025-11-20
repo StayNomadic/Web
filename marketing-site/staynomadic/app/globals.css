@@ -104,6 +104,10 @@
   --sidebar-accent-foreground: #0b1b24;
   --sidebar-border: #e5e7eb;
   --sidebar-ring: #94a3b8;
+
+  /* Surface tints for section backgrounds */
+  --surface-sand: #faf7f2;
+  --surface-sea: #eaf6f3;
 }
 
 
@@ -132,5 +136,15 @@
 
   .focus-ring {
     @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background;
+  }
+
+  /* Surface backgrounds with subtle radial wash */
+  .surface-sea {
+    background: radial-gradient(ellipse 80% 50% at 50% 0%, var(--surface-sea), transparent 70%),
+                var(--surface-sea);
+  }
+
+  .surface-sand {
+    background: var(--surface-sand);
   }
 }
